@@ -1,0 +1,139 @@
+# Documentos Fiscais
+
+Gabriel Antonio da Silva
+Appratico Tecnologia
+gabriel@appratico.com
+linkedin.com/in/gabriel-antonio-silva/
+
+
+## Documentos Fiscais
+
+**NF-e, CT-e e MDF-e**
+
+Iremos abordar de forma objetiva a função de cada uma dessas siglas e 
+para o que elas servem em um ambiente corporativo.
+
+
+## O que é uma NF-e
+
+A Nota Fiscal de Produto Eletrônica (NF-e) é um documento digital 
+que serve para formalizar a venda de produtos e serviços, seja no
+ambiente físico ou no digital. 
+Ela substitui a enorme quantidade 
+de papéis que eram necessários para fazer a emissão manualmente. 
+
+Você já viu aquele papel que costuma acompanhar as compras de produtos
+que você faz pela internet. Pois é, esse cara aí é o ** DANFE ** 
+(Documento Auxiliar da Nota Fiscal Eletrônica), é a representação da nota fiscal eletrônica.
+
+##
+
+.image DocumentosFiscais/danfe.png
+
+## O que é um XML
+
+Extensible Markup Language (XML) é uma linguagem de marcação recomendada para a criação de documentos organizados hierarquicamente. 
+Por seguir um padrão nacional de escrituração fiscal, o **XML** da NFe pode ser utilizado em todo o território brasileiro com segurança.
+
+Segue um exemplo de XML de Nota Fiscal
+
+.link https://www.webdanfe.com.br/danfe/exemplos/NFe_assinada.xml
+
+ - O XML de uma Nota Fiscal possuem várias **tags**, representadas pelos caracteres 
+    "< >", toda informação dentro de um XML é inserida dentro dessas tags, por exemplo:
+
+##
+
+.image DocumentosFiscais/nfe/xml-exemplo.png
+
+##
+
+É possível visualizar com mais detalhes a respeito das tags no Manual de Orientação
+
+.link https://www.nfe.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=9hd38oni4Nc=
+
+## O que é um CT-e
+
+Conhecimento de Transporte Eletrônico (CT-e) é um documento fiscal brasileiro emitido 
+pelas transportadoras de carga para cobrir as mercadorias entre a localidade de origem 
+e o destinatário da carga.
+
+Toda mercadoria física comercializada no Brasil só pode ser vendida mediante 
+a emissão da respectiva nota fiscal. O mesmo se aplica aos serviços de transporte.
+Por isso, o CTe nada mais é do que a nota fiscal eletrônica em 
+versão destinada às empresas que prestam serviços de frete em geral.
+
+O **CTe** se aplica a todos os modais de transporte, ou seja, ferroviário, 
+rodoviário, aéreo, aquaviário e até dutoviário (realizado por dutos, 
+como acontece no setor de óleo e gás). Para o Fisco, trata-se de 
+um documento fiscal indispensável para assegurar a arrecadação de impostos devidos
+nesse tipo de operação. 
+
+Já para as empresas, o CTe é a única forma de atuar 
+no segmento de transportes legalmente. E, para a população, tem ainda mais importância,
+já que ele garante que a empresa obedece às determinações legais
+e, assim, está em condições de prestar bons serviços.
+
+##
+
+Assim como a NF-e, o CT-e também possui um XML, onde estão armazenados todos os dados
+em que aquele CT-e possui.
+
+Com esse XML do CT-e é feito uma assinatura digital por meio de um certificado digital
+da empresa emissora e é enviado uma request para a Receita Federal, 
+onde o mesmo é validado e emitido fiscalmente.
+    
+##
+
+**OBS**.: É possivel conhecer mais a respeito do CT-e com o Manual de Orientação
+
+.link https://www.cte.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=bx74pJ8hXaM=
+
+## O que é uma DACTE
+
+Assim como a NF-e possui a **DANFE** (Documento Auxiliar da Nota Fiscal Eletrônica), 
+o CT-e possui o **DACTE** (Documento Auxiliar do Conhecimento de Transporte Eletrônico),
+que nada mais é do que a representação simplificada do Conhecimento de Transporte Eletrônico (CT-e) 
+
+É documento no qual se encontra toda a informação essencial ao transporte de uma 
+mercadoria e deve acompanhá-la em trânsito, fornecendo informações básicas sobre
+a prestação em curso (emitente, destinatário, valores, etc). 
+
+Ele também ajuda na escrituração das operações documentadas por CT-e, no caso 
+do tomador do serviço não ser contribuinte credenciado para emitir documentos 
+fiscais eletrônicos.
+
+**OBS**.: É possivel visualizar um exemplo de uma DACTE através do link 
+
+##
+
+.image DocumentosFiscais/dacte.png
+
+## O que é um MDF-e
+
+
+Manifesto Eletrônico de Documentos Fiscais, conhecido como MDFe, um documento obrigatório 
+requisitado pela Secretaria da Fazenda e Planejamento (SEFAZ) a fim de facilitar
+a fiscalização do transporte de cargas em território nacional. 
+
+Tornou-se uma obrigatoriedade para as empresas de transporte apenas em 2014, substituindo
+o Manifesto de Carga modelo 25 que até então era documento impresso.
+
+O manifesto serve, portanto, para descomplicar processos de vistoria de mercadorias
+que anteriormente eram muito burocráticos. Em resumo, o MDFe cumpre a função de 
+reunir todos os CTes e NFes (Notas Fiscais Eletrônicas) existentes para entregas
+de mercadorias em um ou mais estados do país.
+
+É importante ressaltar que o Manifesto Eletrônico de Documentos Fiscais
+é emitido e armazenado digitalmente. Além de ser um documento necessário
+apenas no transporte de cargas interestaduais. No momento da vistoria,
+o fiscal costuma checar se o documento está de acordo com os registros previamente
+realizados pela empresa na SEFAZ.
+
+##
+
+A fiscalização é importante para saber se a mercadoria está de acordo com o que foi relatado.
+
+**OBS**.: É possível conhecer mais a respeito do MDF-e com o Manual do MDF-e 
+
+.link https://dfe-portal.svrs.rs.gov.br/mdfe/Documentos

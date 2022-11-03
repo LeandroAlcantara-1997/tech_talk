@@ -1,0 +1,18 @@
+m := map[string]map[string]interface{}{
+	"André Luis": map[string]interface{}{
+		"idade":     24,
+		"sexo":      "masculino",
+		"ensino":    "Superior Completo",
+		"empregado": true,
+	},
+	"Fabiano Silva": map[string]interface{}{
+		"idade":     27,
+		"sexo":      "masculino",
+		"ensino":    "Superior Incompleto",
+		"empregado": true,
+	},
+}
+
+fmt.Printf("%v", m)
+// map[André Luis:map[empregado:true ensino:Superior Completo idade:24 sexo:masculino]
+// Fabiano Silva:map[empregado:true ensino:Superior Incompleto idade:27 sexo:masculino]]

@@ -1,0 +1,15 @@
+type favContextKey string
+
+f := func(ctx context.Context, k favContextKey) {
+	if v := ctx.Value(k); v != nil {
+		fmt.Printf("Valor Encontrado para a key %v: %v\n", k, v)
+		return
+	}
+	fmt.Printf("key não encontrada: %v\n", k)
+}
+
+k := favContextKey("linguagem")
+ctx := context.WithValue(context.Background(), k, "Go")
+
+f(ctx, k)
+f(ctx, favContextKey("usuario"))

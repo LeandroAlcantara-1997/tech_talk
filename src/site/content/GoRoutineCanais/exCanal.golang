@@ -1,0 +1,22 @@
+var wg sync.WaitGroup
+
+func main() {
+	par := make(chan int)
+	impar := make(chan int)
+
+	go send(par, impar)
+	receive(par, impar)
+	wg.Wait()
+}
+func send(p, i chan int) {
+	total := 100
+	for x := 0; x < total; x++ {
+		if x%2 == 0 {
+			p <- x
+		} else {
+			i <- x
+		}
+	}
+	close(p) //sempre fechar canal quando usado em loops
+	close(i)
+}

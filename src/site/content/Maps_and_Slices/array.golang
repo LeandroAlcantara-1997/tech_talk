@@ -1,0 +1,5 @@
+var minhaArray [5]int64
+
+// ou
+
+minhaArray := [5]int64{}

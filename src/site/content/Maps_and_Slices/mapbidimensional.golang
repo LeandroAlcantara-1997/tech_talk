@@ -1,0 +1,10 @@
+m := map[string]map[int64]bool{
+	"abc": map[int64]bool{
+		123: true,
+	},
+	"def": map[int64]bool{
+		456: false,
+	},
+}
+
+fmt.Printf("m: %v", m) // m: map[abc:map[123:true] def:map[456:false]]

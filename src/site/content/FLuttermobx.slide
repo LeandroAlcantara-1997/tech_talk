@@ -1,0 +1,43 @@
+# FLutter Mobx
+
+Fabiano Silva
+Appratico Tecnologia
+silva@appratico.com
+linkedin.com/in/fabiano-c-silva/
+26 Junho 2020
+
+## Introdução
+
+**O que é o MobX ?** Antes de mais nada, o MobX não é algo exclusivo do Flutter, ele existe para outras plataformas como a Web por exemplo, embora não seja tão popular lá.
+
+O MobX é uma biblioteca para gestão de estado, o que significa que podemos utilizar ele para estados locais (páginas) ou globais (com Provider por exemplo).
+
+O MobX se baseia em observáveis, ações e reação, um conceito que vem da programação reativa. No caso toda ação executada gera uma reação, que procura um observável para atualizá-lo.
+
+## MobX e Gestão de Estado
+
+Como sabemos, no Flutter não temos a tela sendo renderizada o tempo todo, precisamos chamar o setState para esta ação, e isto vai se complicando a medida que vamos tendo atualizações em Widgets que estão mais distantes ou mesmo em outras árvores da nossa aplicação.
+
+O MobX basicamente resolve isto criando um Observable ao redor de um Widget que queremos manter sempre atualizado. Neste Widget então, podemos referenciar uma propriedade marcada como **@observable** e toda vez que ela for alterada, seu resultado se reflete na tela.
+
+A única regra aqui é que você 'deve' passar por uma ação **(@action)** para alterar um observável. Na verdade você pode até alterar um observável sem passar por uma ação, mas a ideia é concentrar as regras de negócio nestas ações e manter tudo mais organizado.
+
+Esta ação produz uma reação que atualiza o observável na tela.
+
+## MobX vs Streams
+
+Neste momento você deve estar se perguntando: 'Mas os Streams não fazem exatamente o mesmo?'
+
+Sim, os Streams também tem esta capacidade de alterar uma propriedade sem o uso do setState, porém, eles tem muito mais código e você precisa gerenciar bem eles. Se começar a esquecer Streams abertos, vira um CAOS!
+
+Claro que toda esta mágica tem um custo, e o MobX também precisa de muito código para fazer isto, porém, ele gera boa parte deste código automático para nós.
+
+Por exemplo, ao invés de precisarmos criar um Stream de entrada ou saída (Ou ambos) para um observável, podemos simplesmente decorar uma propriedade com **@observable** que o código adicional será gerado por baixo dos panos pelo MobX.
+
+## MobX vs Streams
+
+Desta forma, teremos um arquivo **'.g.dart'** para cada arquivo que utilizarmos MobX, e estes arquivos não devem ser alterados em hipótese alguma. Toda alteração neles será perdida quando executar alguma mudança nos seus objetos.
+
+E para gerar este código **'.g.dart'** utilizamos o seguinte comando: **flutter packages pub run build_runner build**
+
+Vamos ver na prático com tudo isso funciona.

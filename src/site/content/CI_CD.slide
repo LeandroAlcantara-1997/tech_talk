@@ -1,0 +1,87 @@
+# CI e CD
+
+Izaque Magalhães Silva
+Appratico Tecnologia
+izaque.magalhaes@appratico.com
+15 Outubro 2021
+
+## CI e CD
+
+**CI/CD**, continuous integration/continuous delivery, é um método para entregar aplicações com frequência aos clientes. Para isso, é aplicada a automação nas etapas do desenvolvimento de aplicações. Os principais conceitos atribuídos a esse método são integração, entrega e implantação contínuas.
+
+
+## Qual é a diferença entre CI e CD?
+
+O acrônimo CI/CD tem alguns significados. “CI” sempre se refere à integração contínua, que é um processo de automação para desenvolvedores. Uma CI bem-sucedida é quando novas mudanças no código de uma aplicação são desenvolvidas, testadas e consolidadas regularmente em um repositório compartilhado. É a solução ideal para evitar conflitos entre ramificações quando muitas aplicações são desenvolvidas ao mesmo tempo.
+
+“CD” se refere à entrega contínua e/ou à implantação contínua, conceitos relacionados e usados alternadamente às vezes. Em ambos os casos, se trata da automação de fases avançadas do pipeline, mas são usados às vezes separadamente para ilustrar o nível de automação presente.
+
+A implantação contínua, outro significado para “CD”, se refere ao lançamento automático das mudanças feitas por um desenvolvedor do repositório à produção, onde podem ser usadas pelos clientes. 
+
+## Processo CI e CD
+
+.image CI_CD/CIECD.png
+
+Na abordagem de CI/CD, é possível especificar apenas as práticas relacionadas da integração e entrega contínuas ou as práticas dessas duas mais as da implantação contínua. Ainda há outra questão que dificulta o entendimento: às vezes, o termo “entrega contínua” é usado englobando também os processos da implantação contínua.
+
+## O que é um pipeline de CI/CD?
+
+Um pipeline de CI/CD consiste em uma série de etapas a serem realizadas para a disponibilização de uma nova versão de um software. Os pipelines de integração e entrega contínuas (CI/CD) são uma prática que tem como objetivo acelerar a disponibilização de softwares.
+
+## Elementos de um pipeline de CI/CD
+
+**- Compilação**: estágio em que a aplicação é compilada.
+
+**-Teste**: estágio em que o código é testado. O uso da automação neste estágio poupa tempo e esforços.
+
+**-Lançamento**: estágio em que a aplicação é enviada ao repositório.
+
+**-Implantação**: estágio em que o código é implantado no ambiente de produção.
+
+**-Validação e conformidade**: etapas para validar uma versão são determinadas pelas necessidades da empresa. É possível usar ferramentas de verificação da segurança de imagens, como o Clair, para ter certeza da qualidade das imagens ao compará-las com vulnerabilidades (CVEs) conhecidas.
+
+## Vantagens CI e CD 
+
+**- Tempo de lançamento no mercado mais rápido**
+
+**- Risco reduzido**
+
+**- Tempo de revisão mais curto**
+
+**- Melhor qualidade de código**
+
+**- Caminho mais suave para a produção**
+
+**- Infraestrutura eficiente**
+
+**- Colaboração e comunicação**
+
+**- Conclusão**
+
+## Ferramentas de CI e CD
+
+**- Bitbucket**
+
+O Bitbucket é uma ferramenta de CI integrada ao Bitbucket, um sistema de controle de versão em nuvem oferecido pela Atlassian. O Bitbucket Pipelines é uma próxima etapa fácil para habilitar a CI se o projeto já estiver no Bitbucket. 
+
+O Bitbucket é gerenciado como código, então você pode fazer o commit das definições de pipeline e lançamento de builds com facilidade.
+
+**- Jenkins**
+
+Jenkins é uma ferramenta de CI veterana com um registro de rastreamento comprovado. Ele tem código aberto e é conduzido por atualizações da comunidade. Você pode configurar o Jenkins para observar qualquer mudança de código em lugares como GitHub, Bitbucket ou GitLab e fazer uma construção automática com ferramentas como Maven e Gradle. 
+
+Você pode utilizar a tecnologia de contêiner, como Docker e Kubernetes, iniciar testes e, em seguida, realizar ações como retroceder ou avançar na produção.
+
+
+## Ferramentas de CI e CD
+
+**AWS CodePipeline**
+
+O Amazon Web Services é uma das provedoras de infraestrutura de nuvem mais dominantes no mercado. A empresa oferece ferramentas e serviços para todas as maneiras de tarefas de infraestrutura e desenvolvimento de código. O CodePipeline é a oferta de ferramenta de CI. 
+
+O CodePipeline pode fazer interface direto com outras ferramentas existentes do AWS para proporcionar uma experiência perfeita do AWS.
+
+**Azure Pipelines**
+
+O Azure é a plataforma de infraestrutura de nuvem da Microsoft, o equivalente na Microsoft ao Amazon Web Services. Como o AWS CodePipeline mencionado acima, o Azure oferece uma ferramenta de CI que se integra por completo ao pacote de ferramentas de hospedagem do Azure.
+

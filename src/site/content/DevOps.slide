@@ -1,0 +1,116 @@
+# DevOps
+
+Jefferson Campos 
+Appratico Tecnologia
+jefferson.Campos@appratico.com
+29 Outubro 2021
+
+
+##  O Termo
+
+.image DevOps/Dev_Ops.png    350 900
+
+## Oque é DevOps
+
+**DevOps** "é" a combinação de filosofias culturais, práticas e ferramentas que aumentam a capacidade de uma empresa de distribuir aplicativos e serviços em alta velocidade: Otimizando e aperfeiçoando produtos em um ritmo mais rápido do que o das empresas que usam processos tradicionais de desenvolvimento de software e gerenciamento de infraestrutura. Essa velocidade permite que as empresas atendam melhor aos seus clientes e consigam competir de modo mais eficaz no mercado.
+
+.image DevOps/Tabela.png   350 600
+
+## Como funciona o DevOps...
+
+Com a implementação de um modelo de DevOps, as equipes de desenvolvimento e operações não ficam mais separadas. Às vezes, essas duas equipes são combinadas em uma só. Os engenheiros trabalham durante o ciclo de vida inteiro do aplicativo, da fase de desenvolvimento e testes à fase de implantação e operações, e desenvolvem várias qualificações não limitadas a uma única função.
+
+## DevSecOps 
+
+Em alguns modelos de DevOps, as equipes de controle de qualidade e segurança também podem aumentar sua integração com o desenvolvimento, as operações e todo o ciclo de vida dos aplicativos. Quando a segurança é a prioridade de todos em uma equipe de DevOps, isso é denominado às vezes DevSecOps.
+
+Esse método busca todos os benefícios do DevOps sem renunciar a segurança e, ainda, utiliza a mesma filosofia de entrega rápida, adicionando etapas de segurança no ciclo de desenvolvimento de software.
+
+.image DevOps/DEVSECOPS.png  280 950
+
+
+
+## Práticas de DevOps
+
+- **Integração contínua**
+
+- **Entrega contínua**
+
+- **Microsserviços**
+
+- **Infraestrutura como código**
+
+- **Monitoramento e registro em log**
+
+- **Comunicação e colaboração**
+
+## Ferramentas de DevOps
+
+O modelo de DevOps depende de ferramentas eficazes para ajudar as equipes a implantar de modo rápido e confiável, como também inovar para os seus clientes. Essas ferramentas automatizam tarefas manuais, ajudam as equipes a gerenciar ambientes complexos em escala e a manter engenheiros no controle da alta velocidade que é permitida pelo DevOps.
+
+.image DevOps/ferramentas.png       380 950
+
+
+## Cultura de DevOps
+
+Embora a adoção de práticas de DevOps automatize e otimize processos por meio da tecnologia, tudo começa com a cultura dentro da organização – e com as pessoas que fazem parte dela. O desafio de cultivar uma cultura de DevOps exige mudanças profundas na maneira como as pessoas trabalham e colaboram. Mas quando se comprometem com a cultura de DevOps, as organizações podem criar o ambiente ideal para o desenvolvimento de equipes de alto desempenho.
+
+
+## DevOps e o ciclo de vida do aplicativo/Serviço
+
+O DevOps influencia o ciclo de vida do aplicativo em todas as fases do planejamento, do desenvolvimento, da entrega e da operação. Cada fase depende das demais e elas não são específicas da função. Em uma verdadeira cultura de DevOps, cada função está envolvida de alguma forma em cada fase.
+                                                                        
+.image DevOps/lifecycle.png                              415 750
+
+
+## Benefícios do DevOps 
+
+.image DevOps/Beneficios.png
+
+## Grandes empresas que utilizam o DevOps
+
+- **Walmart**
+
+- **Adobe**
+
+- **Facebook**
+
+- **Netflix**
+
+- **Sony**
+
+- **Amazon**
+
+- **TIM** 
+
+## Porque as empresas apostam tanto nessa cultura 
+
+O DevOps é uma tendência cuja qual não existe retrocessos. Grandes empresas que utilizam o DevOps sabem desta realidade.
+
+O DevOps é uma ferramenta estratégica que é capaz de acelerar entregas. Assim elevando o grau de qualidade, além de realizar processos ininterruptos.
+
+Além disso, é possível reduzir custos através de um feedback melhorado aos clientes, promovendo a confiabilidade e inovação.
+
+O DevOps é capaz de reduzir os custos de uma empresa em até 50 %, uma vez que. Os gastos são gerados pelas falhas, e estas, são diminuídas. As grandes empresas que utilizam o DevOps aqui mostradas apresentam números impressionantes de redução de custos. Isso logo após a adoção da cultura.
+
+## Mude o método!
+
+Aceitar essa metodologia é acreditar que os trabalhos podem ser melhorados constantemente, e abandonar a visão simplista empresarial.
+
+A visão simplista empresarial entende que o colaborador deve apenas trabalhar, o quanto maior seu trabalho, melhor o resultado. Trata-se de um conceito ultrapasso aliado ao equívoco causado por este pensamento.
+
+O que entende-se hoje, é que o colaborador precisa de mais tempo para desenvolver sua criatividade.  Além de também  apresentar respostas mais rápidas.
+
+Grandes empresas que utilizam o DevOps entendem que o futuro começa quando há valorização de tempo. O mesmo ocorre com a integração da equipe em seus mais variados aspectos.
+
+
+
+
+
+
+
+
+
+
+
+ 

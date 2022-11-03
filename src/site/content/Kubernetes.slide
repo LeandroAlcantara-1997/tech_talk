@@ -1,0 +1,140 @@
+# Kubernetes
+
+André Luis da Silva
+Appratico Tecnologia
+andre@appratico.com
+linkedin.com/in/andre-luis-da-silva/
+05 Outubro 2021
+
+## O que é Kubernetes?
+
+**Kubernetes** é uma plataforma open-source, portável e extensiva para o gerenciamento de cargas de trabalho e serviços distribuídos em contêineres, que facilita tanto a configuração declarativa quanto a automação.
+
+O **Google** tornou Kubernetes um projeto de código-aberto em 2014.
+
+Ele possui um ecossistema grande, e de rápido crescimento, que combina mais de 15 anos de experiência do Google executando cargas de trabalho produtivas em escala, com as melhores idéias e práticas da comunidade.
+
+É um **Orquestrador de Contêineres**.
+
+.image Kubernetes/kubernetes.png    250 _
+
+## Orquestrador de Contêineres
+
+O Kubernetes é um orquestrador de contêineres, portanto ele trabalha junto ao Docker, extraindo dos contêineres a melhor performance, escalabilidade e otimização dos recursos utilizados para rodar as aplicações.
+
+Por ser um orquestrador, ele trabalha para um **conjunto de contêineres**, o que representa a criação de um **Cluster**.
+
+Com isso, ele permite a criação exponencial de diversos **nós** contendo contêineres da aplicação, para poder servir a quantidade de requisições recebidas.
+
+## Eras de Implantações
+
+.image Kubernetes/container_evolution.png   350 900
+
+Separando as implantações em "eras", temos o quadro acima representado as principais Eras. Sendo elas: **Implantação Tradicional**, **Implantação Virtualizada** e **Implantação em Contêineres**.
+
+## Explicação das Eras
+
+**Implantação Tradicional**: São os servidores on-premise (físico). Havia problemas com alocação e limitação de recursos, desempenho afetado com a execução de múltiplas tarefas, não escalonável e possui a limitação de um único sistema operacional.
+
+**Implantação Virtualizada**: São diversas máquinas virtuais (VMs) executadas a partir de uma CPU física. Permite aplicações isoladas, melhor utilização dos recursos de um servidor físico, reduz custos de hardware, e sem limitação de sistema operacional.
+
+**Implantação em Contêineres**: Semelhante às VMs, mas tem propriedades de isolamento flexibilizados para compartilhar o sistema operacional entre as aplicações. Permite criação e implantação ágil de aplicações, isolamento de recursos e alta eficiência com a utilização dos recursos.
+
+## Porque preciso de Kubernetes?
+
+Os contêineres são uma boa maneira de agrupar e executar suas aplicações. Em um ambiente de produção, você precisa gerenciar os contêineres que executam as aplicações e garantir que não haja tempo de inatividade.
+
+Por exemplo, se um contêiner cair, outro contêiner precisa ser iniciado. Não seria mais fácil se esse comportamento fosse controlado por um sistema? É assim que o Kubernetes vem ao resgate!
+
+O Kubernetes oferece uma estrutura para executar sistemas distribuídos de forma resiliente. Ele cuida do escalonamento e da recuperação à falha de sua aplicação.
+
+## Principais Features
+
+- **Novos releases, a todo instante**: permite que a equipe crie a todo momento novos releases (CI/CD is coming?).
+- **Escalonamento dinâmico**: cria de novos contêineres no cluster sob demanda da aplicação (scaling up/scaling down).
+- **Descoberta de serviço e balanceamento de carga**: pode expor um contêiner usando o nome DNS ou seu próprio endereço IP. Se o tráfego para um contêiner for alto, ele pode balancear a carga e distribuir o tráfego de rede para que seja estável.
+- **Lançamentos e reversões automatizadas**: cria novos contêineres para sua implantação, remove os contêineres existentes e adota todos os seus recursos para o novo contêiner para um deploy automatizado (BitBucket fazendo deploy?).
+- **Autocorreção**: reinicia os contêineres que falham, substitui os contêineres, elimina os contêineres que não respondem à verificação de integridade definida pelo usuário e não os anuncia aos clientes até que estejam prontos para servir.
+
+## Google Kubernetes Engine (GKE)
+
+.image Kubernetes/gke.png   300 _
+
+O **Google Kubernetes Engine (GKE)** oferece um ambiente gerenciado para implantação, gerenciamento e escalonamento de aplicativos em contêineres usando a infraestrutura do **Google**. O ambiente do GKE consiste em várias máquinas (especificamente, instâncias do **Compute Engine**) agrupadas para formar um cluster.
+
+## Kubernetes no Google Cloud
+
+Quando você executa um cluster do **GKE**, também recebe os benefícios dos recursos avançados de gerenciamento de cluster que o **Google Cloud** oferece. Alguns exemplos:
+
+1. Balanceamento de carga do Google Cloud para instâncias do Compute Engine
+2. Pools de nós para designar subconjuntos de nós em um cluster, o que proporciona mais flexibilidade
+3. Escalonamento automático da contagem de instâncias de nós do cluster
+4. Atualizações automáticas do software de nós do cluster
+5. Reparação automática de nós para manter a disponibilidade e a integridade do nó
+6. Geração de registros e monitoramento com o pacote de operações do Google Cloud para visibilidade no cluster
+
+## Mas... o App Engine não faz o mesmo que o Kubernetes Engine?
+
+O **Google Kubernetes Engine** é um ambiente gerenciado para automatizar a implantação, escalonar e gerenciar cargas de trabalho e serviços em contêineres.
+
+O **Google App Engine** é um serviço gerenciado para criar e executar aplicativos na forma de contêineres.
+
+Vamos ver a seguir as principais diferenças entre os dois gigantes...
+
+.image Kubernetes/gae_vs_gke.png
+
+## Capacidade de Gerenciamento (Administração)
+
+O **GAE** é um serviço totalmente gerenciado que não se preocupa com a infraestrutura subjacente. A configuração pode ser feita pela UI no Google Cloud ou por comandos simples. O App Engine é dimensionado perfeitamente de acordo com o tráfego. Não é necessário muito conhecimento para começar com o Google App Engine e trabalhar com ele na produção.
+
+No **GKE**, embora a rotação de um cluster Kubernetes com um serviço gerenciado seja fácil, a experiência adequada é necessária para executar um cluster Kubernetes gerenciado pelo provedor de nuvem na produção e escaloná-los de acordo com os requisitos. 
+
+## Agnóstico da Nuvem
+
+O Google App Engine é um serviço totalmente gerenciado pelo Google Cloud e você precisa escrever o código na maneira do Google App Engine para utilizá-lo. No entanto, pode causar problemas ao migrar seus serviços do Google App Engine para outras plataformas ou outros provedores de nuvem. Precisaria de muitas alterações de código e nunca seria fácil para um aplicativo de grande escala.
+
+Por outro lado, ao executar suas cargas de trabalho no Kubernetes, seja em um cluster autogerenciado ou em um cluster gerenciado pelo provedor de nuvem, você pode migrar facilmente suas cargas de trabalho sem nenhuma alteração de código. Assim que seu cluster Kubernetes estiver ativo em outro provedor de nuvem, você poderá começar a migrar sua carga de trabalho facilmente.
+
+## Monitoramento e Registro
+
+Por ser um serviço totalmente gerenciado, você não precisa se preocupar com a configuração do monitoramento e registro de seus serviços no Google App Engine. O Google App Engine oferece o serviço Stackdriver e Logging para monitorar e registrar os requisitos de suas cargas de trabalho. **-- já não é uma realidade, fizemos isso na mão com a última migração da versão do Go... rs --**
+
+No Kubernetes, você precisa implantar soluções de monitoramento e registro de acordo com sua necessidade de serviço.
+
+## Custos
+
+Se compararmos o custo da infraestrutura subjacente do Google Kubernetes Engine e do Google App Engine com 20 CPU e 75 GB de memória, o Google App Engine custa aproximadamente USD $1.156,69, enquanto o Kubernetes custa apenas USD $485,45.
+
+Esta é uma estimativa muito básica para o Google Cloud e inclui apenas o custo de CPU e memória, não leva em consideração outros custos de recursos, como tráfego de rede, espaço em disco, etc.
+
+## Tempo de Implantação (deploy)
+
+O App Engine leva mais tempo na implantação - às vezes, pode levar vários minutos para que a implantação seja concluída no GAE. Este tempo de implantação inclui a construção de imagens Docker e sua implantação na VM subjacente.
+
+No Kubernetes, a implantação pode ser feita em apenas alguns segundos (ou minutos) assim que as imagens do docker estiverem disponíveis.
+
+Em ambos os casos, o tempo de implantação também depende de sua estratégia de implantação e escala do aplicativo.
+
+## Segurança da Infraestrutura
+
+Por ser um serviço totalmente gerenciado, o Google App Engine expõe seu serviço e cuida da segurança da infraestrutura subjacente. Além disso, você pode adicionar regras de firewall e restringir seu serviço a redes específicas e específicas.
+
+No Kubernetes, você precisa cuidar da segurança do seu cluster do Kubernetes. Embora os clusters gerenciados possam reduzir esse trabalho, você ainda precisará cuidar da segurança da infraestrutura subjacente e seguir as práticas recomendadas para evitar possíveis violações de segurança.
+
+## Curva de Aprendizado
+
+Começar a usar o Google App Engine é fácil e qualquer pessoa pode começar a trabalhar com ele imediatamente após ler alguns tutoriais.
+
+Por outro lado, o Kubernetes Engine tem uma curva de aprendizado íngreme, é um pouco difícil de começar e leva tempo para ser totalmente entendido conceitualmente, mas, em última análise, tem uma grande recompensa escalonável.
+
+## Resumão das Diferenças...
+
+- Organizamos nossa carga de trabalho em contêineres usando o GAE e o GKE.
+- O GAE é um serviço totalmente gerenciado, onde os usuários não precisam se preocupar com a infraestrutura subjacente e é fácil de iniciar. Enquanto o GKE precisa de conhecimento especial para gerenciar a carga de trabalho de produção e leva tempo para entender totalmente os conceitos, mas tem maior escalabilidade.
+- (código depreciado kk) Como um serviço gerenciado, o GAE fornece benefícios de monitoramento, registro e segurança. No GKE, podemos implantar ferramentas de código aberto para eles ou podemos integrar ofertas na nuvem ou comerciais.
+- Embora ofereça muitos benefícios como um serviço gerenciado, o custo do App Engine é muito alto em comparação com o Kubernetes Engine.
+- A migração de serviços do App Engine para outras plataformas não é direta. Podemos migrar nosso cluster Kubernetes sem qualquer alteração de código.
+
+## É hora do debate... café com bits ;)
+
+.background Kubernetes/coffee_gopher.png

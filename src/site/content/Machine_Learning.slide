@@ -1,0 +1,53 @@
+# Machine Learning
+
+Nicolas Morales
+Appratico Tecnologia
+
+## WTF is Machine Learning ?
+
+Machine Learning ou aprendizado de máquina, nada mais é que uma aplicação aprender isoladamente funções básicas e complexas através da tentativa e erro, além também de poder aprender por ensinamentos através de INFINITAS formas.
+
+Para entendermos de uma forma mais genérica, podemos citar o jogo Portal, na qual Glados que é um programa de computador, impõe o jogador em diversos testes perigosos de raciocíneo lógico e agilidade, para tirar parâmetros de como agimos perante as situações para então ele mesmo criar máquinas autossuficientes e criativas.
+
+No mundo real não é diferente, a princípio devemos "ensinar" o básico para então a própria máquina "explorar" o desconhecido e finalmente aprender com seus erros, mas vale ressaltar que nenhuma maquina possui a habilidade de "pensar", para entender isso abordaremos mais a frente.
+
+## Rede Neural
+
+A rede neural é um tipo de **Machine Learning**, a característica mais marcante das redes neurais é a estrutura semelhante a rede de neurônio em nosso cérebro.
+
+São sistemas compostos por vários nós que se interconectam em diversar ramificações, as redes neurais aprendem por meio de atualização e ampliação desses laços e interconexões, sendo assim TODO nó possui informações.
+
+Cade vez que uma relação lógica é estabelecida entre os nós, surge uma nova conexão os ligando, do mesmo modo surgem novos nós que por sua vez terão novas conexões e assim por diante.
+
+## E a pergunta, as máquinas são capazes de pensar?
+
+Até o presente momento **não** e isso esta anos luz de acontecer, porque as máquinas ainda não são autossuficientes e até mesmo o machine learning é limitado, elas ainda não são plenamente criativas e capazes de pensar, MAS a técnologia e ciência continuam avançando com grande força.
+
+**E como a máquina aprende e cria sua "autonomia" ?**
+
+Existem 4 tipos de aprendizado, são eles:
+
+1- Aprendizado Supervisionado : o sistema receberá um conjunto prévio de dados que contém a resposta correta, ou seja, os problemas e as solução já estão definidas e associadas e tudo que a máquina deve fazer é mostrar os resultados a partir das variáveis. Ex: Busca de Imagem do Google
+
+2- Aprendizado Não-Supervisionado : nesse tipo cada movimento é uma nova descoberta, ou seja, extremamente mais complexa, isso quer dizer que o cruzamento de dados é imprevisível e depende das variáveis inseridas no sistema.
+
+3- Aprendizado Semi-Supervisionado : é a combinação dos tipos à cima, ou seja, existem uma quantidade de respostas definidas entre as incertezas previamente apresentadas.
+
+4- Aprendizado por Reforço : é como se o robo fosse solto em algum lugar desconhecido, onde passa a realizar testes para coletar impressões e se adaptar ao ambiente.
+
+
+## Machine Learning no nosso dia-a-dia
+
+Estamos tão acostumados com **Machine Learning** de forma indireta que isso passa totalmente desapercebido, vamos a alguns exemplos:
+
+Google Maps ou Waze : indica os caminhos mais rápidos de acordo com sua origem e destino
+
+Amazon : recomenda produtos e serviços de acordo com seus hábitos
+
+## Na prática
+
+Para a apresentação não se tornar tão complexa e cheia de teorias e muito aprofundada a ponto de abordamos patamares complexos, vamos ver como funciona na prática o resultado da programação de algoritimos e redes neurais: 
+
+.link https://www.youtube.com/watch?v=Aut32pR5PQA Corrida autônoma
+
+

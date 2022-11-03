@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {						  .output	
+					
+	go frango()     					Picles                         
+	picles()                            Picles		
+}                                       Picles
+										Picles
+func frango() {                         Picles
+	for i := 0; i < 5; i++ {            
+		fmt.Println("Frango")             
+	}                                   
+}                                       
+func picles() {                         
+	for i := 0; i < 5; i++ {
+		fmt.Println("Picles")
+	}
+}

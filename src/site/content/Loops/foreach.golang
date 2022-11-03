@@ -1,0 +1,4 @@
+pedidos := []string{“A”, “B”, “C”}
+for i, valor := range pedidos {
+	fmt.Printf(“Execução for-each [%d]: %s \n”, i, valor)
+}

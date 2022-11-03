@@ -1,0 +1,26 @@
+...
+func receive(par, impar chan int) {
+	wg.Add(2)
+	go func() {
+		for v := range par {
+			fmt.Println("Valor par", v)
+		}
+		wg.Done()
+	}()
+
+	go func() {
+		for v := range impar {
+			fmt.Println("Valor impar", v)
+		}
+		wg.Done()
+	}()
+}
+.output
+Valor par 0
+Valor impar 1
+Valor impar 3
+Valor par 2
+Valor par 4
+Valor par 6
+Valor impar 5
+Valor impar 7

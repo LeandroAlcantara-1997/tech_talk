@@ -1,0 +1,20 @@
+# github.com/yuin/goldmark v1.4.3
+## explicit
+github.com/yuin/goldmark
+github.com/yuin/goldmark/ast
+github.com/yuin/goldmark/parser
+github.com/yuin/goldmark/renderer
+github.com/yuin/goldmark/renderer/html
+github.com/yuin/goldmark/text
+github.com/yuin/goldmark/util
+# golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d
+golang.org/x/net/websocket
+# golang.org/x/sys v0.0.0-20210809222454-d867a43fc93e
+golang.org/x/sys/execabs
+# golang.org/x/tools v0.1.7
+## explicit
+golang.org/x/tools/godoc/static
+golang.org/x/tools/playground
+golang.org/x/tools/playground/socket
+golang.org/x/tools/present
+golang.org/x/tools/txtar

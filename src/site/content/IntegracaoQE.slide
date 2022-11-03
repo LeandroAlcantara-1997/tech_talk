@@ -1,0 +1,61 @@
+# Integração EDI - QE
+
+André Miranda Pereira
+Appratico Tecnologia
+andre.miranda@appratico.com
+https://linkedin.com/in/andre-miranda-pereira/
+04 Janeiro 2020
+
+## Como funciona as Integrações EDI na QE
+
+Atualmente os documentos são transmitidos via E-mail ou FTP
+
+Os arquivos são gerados em um intervalo de tempo programado no _cron_
+
+## NOTFIS
+
+Os arquivos NOTFIS são recebidos e encaminhados para a pasta **xml_nfe/**
+
+Dado o horário programado no cron para leitura do arquivo, é executado o script **leitorEDI.php**
+
+O script realiza o decode do EDI e o grava no banco de dados
+
+O EDI lido é, posteriormente, utilizado como base de dados da carga a ser transportada
+
+## OCOREN, CONEMB e DOCCOB
+
+Os arquivos OCOREN, CONEMB e DOCCOB são enviados pela transportadora para a embarcadora
+
+Dado o horário programado no cron para leitura do arquivo, é executado o script **EdiProceda.php**
+
+O script realiza o encode do EDI conforme layout e gera o documento
+
+O documento criado é transmitido via email da embarcadora ou servidor FTP
+
+## ETAPAS DE PROCESSAMENTO DO leitorEDI.php
+
+- Busca arquivos armazenados no servidor
+
+- Valida extensão do arquivo enviado pela embarcadora
+
+- Valida versão do EDI
+
+- Decodifica o documento
+
+- Grava no banco de dados
+
+- Retorna quantidade de documentos lidos
+
+## ETAPAS DE PROCESSAMENTO DO EdiProceda.php
+
+- Valida layout do EDI (OCOREN, CONEMB ou DOCCOB)
+
+- Busca informações da carga
+
+- Gera nome do documento
+
+- Gera documento no layout desejado
+
+- Grava documento
+
+- Retorna o caminho do documento gerado no servidor

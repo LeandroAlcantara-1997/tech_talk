@@ -1,0 +1,102 @@
+# Clean Architecture - Arquitetura Limpa
+
+Eduardo Borges Santos
+Appratico Tecnologia
+eduardo.borges@appratico.com
+22 Outubro 2021
+
+
+## O que é Clean Architecture
+Um padrão de arquitetura de software proposto por Robert Martin e tem como objetivo dividir o software em camadas, assim, separando as preocupações onde cada camada terá suas respectivas responsabilidades.
+
+.image CleanArchitecture/livro3.jpg
+
+## Pontos Principais
+
+**Indepêndencia de framework**
+- Não depende de nenhuma ferramenta externa à linguagem, como frameworks e bibliotecas.
+Portanto, a tecnologia acaba sendo usada de maneira anexa em vez de serem limitadas.
+
+**Testabilidade**
+- As regras de negócio são testadas sem interface, banco de dados, servidor externo ou qualquer outro elemento externo.
+
+ **Indepêndencia da interface do usuário**:
+- Interface pode ser facilmente substituida sem impactar no restante do sistema, por exemplo, 
+substituir uma interface web por uma de console sem alterar as regras de negócio.
+
+##
+ **Indepêndencia do Banco de dados**
+- Flexibilidade para trocar o banco de dados, como por exemplo, SQLServer para MySQL. 
+
+ **Indepêndencia de qualquer elemento externo**
+- As regras de negócio não sabem nada sobre as interfaces do mundo externo.
+
+## A regra de dependência
+
+A regra de dependência exige aos componentes enxergar apenas a camada anterior à ela, ou seja, a
+ "Frameworks e Drivers" enxerga a "Interface Adapters". Evitando que as camadas internas sejam dependentes das camadas externas.
+
+.image CleanArchitecture/regra2.png
+
+## Camadas da Clean Architecture
+.image CleanArchitecture/camadas.jpg
+
+## Entities (Entidades)
+Onde criamos as entidades e definimos os tipos de acesso (Get e Set), são o retrato das tabelas do banco de dados dentro do sistema.
+
+.image CleanArchitecture/entitie.png
+
+
+## UseCases (Caso de uso)
+ Representam a regra de negócio da aplicação e é responsavel pela comunicação entre as entidades, todas as informações devem passar por ela.
+
+.image CleanArchitecture/usecase.png
+
+## Adapters (Adaptadores)
+ Camada responsavel pela comunicação entre os elementos externos com a regra de negócio (controllers, presenters e repositorios 
+usados como adaptadores).
+
+.image CleanArchitecture/adapters.png
+
+## Frameworks e Drivers (Mundo externo)
+ Camada onde todos os elementos precisam de se comunicar com o núcleo do projeto (banco de dados, frameworks, dispositivos
+e interfaces externas).
+
+.image CleanArchitecture/framework.png
+
+## EndPoint
+.image CleanArchitecture/router.png
+
+## Controllers/Presenters
+.image CleanArchitecture/enviarHandler.png
+
+## Regra de negócio
+.image CleanArchitecture/enviarcte.png
+
+## Vantagens e Desvantagens
+
+**Vantagens**
+- Código facilmente testavel;
+- Componentes ainda mais desacoplados;
+- Estrutura fácil para navegação;
+- Novas funcionalidades podem ser adicionadas rapidamente pelos desenvolvedores.
+
+**Desvantagens**
+- Curva de aprendizado relativamente íngreme, considerando que todas as camadas funcionam juntas, 
+exigindo um certo tempo para entender seus conceitos, principalmente desenvolvedores provenientes de padrões como MVVM e MVP simples;
+- Não é sugerido para projetos de baixa complexidade pelo numero de classes que vão ser adicionadas.
+
+## Clean Architecture e Clean Code
+
+
+**Clean Code**
+- Tem como objetivo especificar um padrão de escritar ao codar de uma maneira para ser facilmente entendido e mantidos pelos desenvolvedores.
+
+**Clean Architecture**
+- Seu objetivo é estrurar a aplicação para fácil manutenção, flexibilidade para trocar banco de dados e frameworks, testabilidade etc.
+
+## Referencias
+
+https://medium.com/luizalabs/descomplicando-a-clean-architecture-cf4dfc4a1ac6
+https://imasters.com.br/back-end/introducao-clean-architecture
+https://engsoftmoderna.info/artigos/arquitetura-limpa.html

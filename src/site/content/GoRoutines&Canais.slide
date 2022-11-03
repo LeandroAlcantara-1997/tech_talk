@@ -1,0 +1,87 @@
+# Goroutines & Canais
+
+Thauan Mendes de Lima
+Appratico Tecnologia
+thauan.mendes@appratico.com
+linkedin.com/in/thauan-mendes-de-lima-204a971b3
+23 de Julho 2021
+
+## 
+.image GoRoutineCanais/maromba.png
+
+## Goroutines
+
+**O que são Goroutines?**
+- Goroutine é um método/função que pode ser executado independentemente. Similar a "threads", não é exatamente a mesma coisa mas é proximo, o mesmo conceito mas não a mesma execução.
+
+**O que são threads?**
+- "Fio de execução", também conhecido como "linha ou encadeamento de execução",(em inglês: Threads), é uma forma de um processo dividir a si mesmo em duas ou mais tarefas que podem ser executadas concorrencialmente.
+
+**Na prática "go func"**
+- Quando implementa um "go" antes de uma função ela se torna uma goroutine
+
+## Exemplo sem Goroutine
+
+.code GoRoutineCanais/exSequencial.golang
+
+## Exemplo com Goroutine
+
+.code GoRoutineCanais/exUmComGo.golang
+
+##
+- Por ser uma goroutine a função **frango** foi disparada e a função **main** continuou a sequencia sem esperar que a func frango terminasse a execução, a **go frango()** esta concorrencialmente sendo executada junto com a main
+- A main acabou deixando a func frango no **"espaço"**
+
+**Sincronizando essa bagaça com WaitGroup**
+
+ **O que é?**
+- Uma função do pkg sync utilizado para tratar goroutines:
+    - func Add(): "Quantas goroutines?"
+    - func Done(): "Feito!"
+    - func Wait(): "Espera todo mundo terminar"
+
+##
+.code GoRoutineCanais/exComWait.golang
+
+## Condição de Corrida (Race Condition)
+- É uma falha num sistema ou processo em que o resultado do processo é inesperadamente dependente da sequência ou sincronia de outros eventos. Esse problema esta relacionado ao gerenciamento da concorrência entre processos teoricamente simultâneos.
+
+- Em outras palavras, isso ocorre quando varias goroutines estão acessando a mesma variável.
+- Usando o "go run -race 'arquivo.go'" o programa mostrará se há ou não condição de corrida.
+- ex: https://play.golang.org/p/LIb0eAR1V4m
+
+## Canais (Channels)
+
+**O que são Canais?** 
+- Em golang, canais são um meio pelo qual diferentes goroutines se comunicam. Pense neles como canais através dos quais você pode se conectar com diferentes goroutines simultâneas. A comunicação é bidirecional por padrão, o que significa que você pode enviar e receber valores do mesmo canal.
+- Além disso, por padrão os canais enviam e recebem até que o outro lado esteja pronto. Isso permite que as goroutines sejam sincronizadas sem bloqueios explícitos ou variáveis de condição.
+- Canais são como corredores em uma corrida de revesamento, eles têm que "passar o bastão" de maneira sincronizada. 
+ 
+##
+**Deadlock**
+
+- Um fator importante a se considerar quando usar canais é o Deadlock. Se uma Goroutine estiver enviando dados para um canal, se espera que outra Goroutine esteja recebendo esses dados. Se isto não ocorrer, então o programa entrará em estado de Deadlock. O mesmo acontece se uma Goroutine estiver esperando para receber um dado de um canal e não existir outra Goroutine escrevendo neste canal.
+- Na pratica:
+ - make(chan **type**, **b**)
+ - send channel: **canal<-**
+ - receive channel:   **<-canal**
+
+## Exemplo
+
+.code GoRoutineCanais/exCanal2.golang
+
+## Canais com Range
+
+.code GoRoutineCanais/exCanal.golang
+
+## 
+
+.code GoRoutineCanais/exCanal3.golang
+
+## Curiosidades
+
+- Diferença ente Goroutine e Thread (https://pt.it-brain.online/question/difference-between-goroutine-and-thread-in-golang/)
+- Mutex e Atomic (outras maneiras de lidar com race condition)
+- Canais Convergentes e Divergentes
+
+.image GoRoutineCanais/noia.jpeg

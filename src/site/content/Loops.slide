@@ -1,0 +1,83 @@
+# Loops (Laço de Repetição)
+
+André Luis da Silva
+Appratico Tecnologia
+andre@appratico.com
+linkedin.com/in/andre-luis-da-silva/
+21 Maio 2020
+
+## Introdução
+
+Loop é uma instrução de programação para que possamos realizar determinado bloco de código **N** vezes, de acordo com a lógica usada e a condição de permanência.
+
+Nesta apresentação vamos mostrar um pouco mais sobre os tipos de loops (laço de repetição) em Go. A ideia inicial é mostrar como é possível aplicar diversas formas diferentes de declaração da única palavra reservada de laço de repetição do Go (for).
+
+Dependendo de como é declarado o **for**, a lógica dele pode reagir de formas diferentes da convencional.
+
+
+## Estrutura
+
+O **for** pode receber **nenhuma** ou até **3** instruções em sua declaração, e é justamente isso que pode proporcionar diferentes resultados.
+
+Assim como em outras linguagens, a instrução padrão do **for** no Go, é a instrução abaixo.
+
+.code Loops/declaracao.golang
+
+- **inicio**: Será a instrução a ser executada **antes** da primeira iteração do loop.
+- **condicao**: Será a instrução a ser executada a cada passo **antes** de executar cada iteração.
+- **fim**: Será a instrução a ser executada a cada passo **depois** de executar cada iteração. 
+
+Essa é a forma mais trivial de se criar um loop, com cada uma de suas instruções separadas por ponto e vírgula (;).
+
+
+## Loop Trivial
+
+É a forma que utilizamos com base em uma instrução de início, uma condição de permanência, e uma instrução de passo.
+
+Esse exemplo é o mais comum em todas as linguagens para a keyword **“for”**.
+
+É a forma do loop que criamos de forma com que as instruções dele, seja a condição da permanência da execução dele.
+
+.code Loops/fortrivial.golang
+
+- O **início** (1a. instrução) cria uma variável de **escopo** nomeada como **i**, iniciando com o valor **0**.
+- A **condição** (2a. instrução) é que enquanto **i** for menor do que 10 ele continue executando.
+- O **passo** (3a. instrução) é que a cada execução do for, antes de ir para a próxima execução, incrementa a variável **i** com o próximo número.
+
+
+## Loop ‘While’
+
+Outra forma de criar um loop no Go, é a forma de loop “**while**”, para isso, basta informar apenas uma instrução (condição de permanência), assim como no exemplo abaixo.
+
+.code Loops/forwhile.golang
+
+Essa forma pode ser usada como um “**while**”, que é a maneira do seu loop executar sempre que uma condição for verdadeira, seja ela um contador, uma variável booleana ou alguma lógica qualquer do seu script.
+
+
+## Loop ‘Infinito’
+
+Outra forma de criar um loop no Go, é a forma de loop “**infinito**”, para isso, basta omitir todas as instruções, assim como no exemplo abaixo.
+
+.code Loops/forinfinito.golang
+
+Neste caso, basta não informar nada na instrução, que o loop vira um loop “**infinito**” / “**do-while**”.
+
+Lembre-se sempre de colocar condições para que saia do loop.
+
+Essa forma pode ser usada em alguns tipos de situações convenientes do código, porém a principal é tornar o loop em um “**do-while**”, que é a maneira de forçar o seu código do loop a rodar pelo menos uma vez (mesmo que não satisfaça nenhuma condição de entrada), e dentro dele tenha alguma condição para sair do loop, sendo um **return** ou um **break**.
+
+
+## Loop ‘For-each’
+
+Outra forma de criar um loop no Go, é a forma de loop “**for-each**”, que é a maneira de declarar um loop percorrendo um objeto até finalizar o seu tamanho.
+
+Como por exemplo, digamos que temos um slice e queremos percorrer todos os índices dele pegando os seus valores e índices. Para isso, temos a palavra reservada **range**, veja:
+
+.code Loops/foreach.golang
+
+Neste caso, o loop irá ser executado enquanto houverem índices para percorrer do slice.
+
+O conteúdo da variável **i** sempre será o índice atual que está sendo percorrido.
+
+E o conteúdo da variável **valor** sempre será o valor atual que está sendo percorrido.
+

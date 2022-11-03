@@ -1,0 +1,135 @@
+# Maps and Slices
+
+André Luis da Silva
+Appratico Tecnologia
+andre@appratico.com
+linkedin.com/in/andre-luis-da-silva/
+21 Maio 2020
+
+## Slices ou Arrays?
+
+Ambos existem em Go!
+
+A única diferença é que para ser chamado de **array** ela deve ter um tamanho fixo.
+
+Logo, a declaração de um array, seria desta maneira:
+
+.code Maps_and_Slices/array.golang
+
+Desta forma, estamos criando um array de 5 posições do tipo inteiro, ou seja, só posso alocar 5 valores inteiros dentro desse array.
+
+É por esse motivo que acabamos chamando tudo de **slice**, já que raramente teremos tamanhos fixos para esse tipo de variável.
+
+
+## Slices
+
+A declaração de um **slice**, é semelhante a de um array, porém sem a quantidade fixa de posições entre os colchetes em sua declaração.
+
+.code Maps_and_Slices/slice.golang
+
+Desta forma, estamos criando um slice de inteiros de posição indeterminada, ou seja, posso alocar quantos valores eu quiser dentro deste slice, desde que eles sejam do tipo **int64**.
+
+
+## Funções de Slices
+
+Temos duas funções que podemos usar nas slices que podem nos ajudar. São elas:
+
+**append**
+
+Append é uma função comumente conhecida em outras linguagens, e que tem a mesma finalidade em Go, que é adicionar um novo valor no final do slice.
+
+.code Maps_and_Slices/append.golang
+
+Veja que podemos adicionar um único valor a mais, ou **N** valores a mais.
+
+Essa função é muito utilizada pois nos dá diversas possibilidades de resolver qualquer tipo de problema.
+
+
+## Funções de Slices
+
+A segunda função que o Go nos disponibiliza é a:
+
+**copy**
+
+Copy é uma função bem interessante que permite copiarmos o estado atual de um slice em um novo slice.
+
+.code Maps_and_Slices/copy.golang
+
+É uma função bem menos utilizada que o append, por possuir algumas limitações, a principal delas é você não conseguir copiar o conteúdo de uma slice que não foi declarada a sua *capacidade*. Porém tem alguns casos de usos que realmente faz total sentido usarmos essa função.
+
+
+## Slice: Tamanho e Capacidade
+
+Temos que ter em mente, que tamanho e capacidade em Go é algo diferente quando falamos de slices.
+
+Por se tratar de algo "infinito", o Go não pode simplesmente reservar um grande espaço em memória para um slice, pois ele pode ter apenas 1 valor.
+
+Portanto, sempre que fazemos um append em um slice, o Go automaticamente realoca o espaço em memória dessa variável de acordo com a quantidade de novos valores adicionados ao slice (usando alguns algorítmos).
+
+Veja:
+
+.code Maps_and_Slices/lencap.golang
+
+
+## Slices: Acessar Índices e "Cortes"
+
+Para acessar um índice de um slice em Go, é semelhante a qualquer outra linguagem, basta você declarar entre colchetes qual é a posição que você deseja acessar.
+
+.code Maps_and_Slices/indice.golang
+
+Mas tome cuidado, se você tentar acessar uma posição inexistente, o Go vai gerar um **panic**, então sempre que for acessar uma posição, tenha certeza que ela exista! (len, for-each, etc...)
+
+E se eu quiser "cortar" um slice? Basta especificar de onde vai iniciar e onde vai terminar! Desde que tenha o mesmo cuidado de que as posições existam!
+
+
+.code Maps_and_Slices/corte.golang
+
+
+## Slices Bidimensionais
+
+Tá, e podemos fazer slices Bidimensionais? Sim! Em alguns casos vamos precisar de slices bidimensionais, então podemos declarar eles da mesma maneira, apenas adicionando mais um par de colchetes.
+
+.code Maps_and_Slices/bidimensional.golang
+
+E slices Multidimensionais? Não!
+
+O Go não permite slices multidimensionais por padrão, para isso ele indica que façamos uso de **structs**.
+Mas, como tudo tem um jeito, é possível fazer multidimensionais com uso de **interfaces** porém não é aconselhado.
+
+
+## Maps
+
+Mapas é uma coleção **desordenada** de pares de chave-valor. Também conhecida como array associativa.
+
+Na sua declaração, devemos especificar o tipo da chave e o tipo do valor que será armazenado.
+
+.code Maps_and_Slices/map.golang
+
+Desta forma, criamos uma variável **m** do tipo mapa, que tem como **chave** o tipo **string**, e como **valor** o tipo **float64**.
+
+.code Maps_and_Slices/maps.golang
+
+## Função de Maps
+
+A única função que o Go disponibiliza para uso de maps, é a **delete**.
+
+Essa função tem como objetivo excluir um conjunto chave-valor do seu mapa, de acordo com a chave que você informar.
+
+.code Maps_and_Slices/delete.golang
+
+
+## Maps "Bidimensionais"
+
+Assim como as slices, no Go é possível você ter um mapa "bidimensional", que é basicamente você encapsular dentro de um valor do seu mapa, um outro mapa.
+
+.code Maps_and_Slices/mapbidimensional.golang
+
+Um pouco confuso né? Nem tanto!
+
+Vamos aos exemplos.
+
+## Maps "Bidimensionais"
+
+Imagine que tenhamos funcionários e que esses funcionários tenham atributos, veja o exemplo abaixo:
+
+.code Maps_and_Slices/funcionarios.golang

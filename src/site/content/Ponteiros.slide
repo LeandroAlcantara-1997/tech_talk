@@ -1,0 +1,54 @@
+# Ponteiros em GO
+
+Pedro Nicolas Santos
+Appratico Tecnologia
+pedro.nicolas@appratico.com
+linkedin.com/in/pedro-nicolas-santos/
+08 Julho 2021
+
+## O que são Ponteiros
+
+**Ponteiros** é uma das funcionalidade em GO que foi herdada da *linguagem C* com funcionamento idêntico
+
+
+
+- Todos os valores ficam armazenados na memória
+
+- Toda localização na memória possui um endereço.
+
+- Um ponteiro se refere a esse endereço.
+
+## Como identificar Ponteiros
+
+Assim como na linguagem C, o Ponteiro em GO é declarado pelo símbolo " * " sendo referenciado pelo " & ", conforme exemplo abaixo: 
+
+.code Ponteiros/Ponteiros1.golang
+
+## Formas de uso dos Ponteiros
+
+Os ponteiros podem apontar para qualquer tipo de variável. Portanto temos ponteiros para:
+
+- string
+- int
+- float
+- nil
+
+Com Ponteiros em GO, não é possível fazer operações aritméticas
+
+## Por que usar Ponteiros ?
+
+Ponteiros permitem compartilhar endereços de memória.
+
+**Isso é útil quando:**
+
+
+- Queremos mudar um valor em sua localização original
+- Pode ser usado também para manipulação de arrays, para retornar mais de um valor em uma função e referenciar váriaveis.
+
+## Qual a ideia por trás dos Ponteiros
+
+Os ponteiros devem ser usados onde não existe outra opção, por falta de uma funcionalidade adequada ou apenas por questões de desempenho
+
+Essencialmente serve para criar indireção, ou seja, em vez de acessar um valor diretamente, você passa um endereço onde tem esse valor.
+
+.image Ponteiros/gopherrrrr.png

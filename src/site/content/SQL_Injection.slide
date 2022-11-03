@@ -1,0 +1,74 @@
+# SQL Injection
+
+Gabriel Antonio da Silva
+Appratico Tecnologia
+gabriel@appratico.com
+linkedin.com/in/gabriel-antonio-silva/
+
+## O que é SQL?
+
+SQL (Structured Query Language) é a linguagem padrão universal para manipular bancos de dados relacionais através dos SGBDs. Isso significa que todos os SGBDs (Sistema de Gerenciamento de Banco de Dados) oferecem uma interface para acessar o banco de dados utilizando a linguagem SQL, embora com algumas variações.
+
+Abaixo temos alguns exemplos de SGBDs que utilizam a linguagem SQL:
+
+- MySQL
+- Oracle
+- SQL Server
+- PostgreSQL
+- SQLite
+- MariaDB
+
+## E o que é SQL Injection?
+
+O SQL Injection é uma técnica de ataque baseada na manipulação do código SQL, que é a linguagem utilizada para troca de informações entre aplicativos e bancos de dados relacionais.
+
+Podemos dizer que SQL Injection é um tipo de vulnerabilidade no código de sites e aplicativos web que permitem que invasores sequestrem processos no Back-end e acessem,
+alterem, extraiam e excluam informações confidenciais de banco de dados conectado a aplicação.
+
+## Exemplo de Query
+
+Essa query é um exemplo e uma realidade em diversas empresas que ainda utilizam dessa forma para autenticar um usuário a uma aplicação.
+
+Nesse exemplo nós estamos montando a clausula SQL usando os dados vindos diretamente do método POST do HTTP, sem proteção alguma, apenas recebendo o que vier em ambos inputs do formulário.
+
+.image SQL_Injection/exemploSQL2.png
+
+## Exemplo de SQL Injection
+
+.image SQL_Injection/exemploSQL.png
+
+## Formas de se defender de um SQL Injection
+
+**filter_input**
+
+Para substituirmos nosso famigerado $_POST, podemos utilizar uma função nativa do PHP.
+
+Para fazer a coleta e validação da informação já no ato em que recebemos os dados, vejamos o exemplo abaixo:
+
+.code SQL_Injection/filter_input.php
+
+Como podemos analisar, ao chamarmos a função “filter_input” no primeiro parâmetro informado determinamos o tipo de origem da informação, 
+
+no segundo parâmetro informamos o nome do campo que desejamos receber e por último informamos que desejamos validar se o dado recebido é um e-mail.
+
+## Formas de se defender de um SQL Injection
+
+.image SQL_Injection/exemploSQL5.png
+
+## Listando todas as tabelas do Banco 
+
+Mas para que eu possa deletar, criar, editar algum dado de uma tabela, eu preciso saber qual a estrutura desse banco de dados.
+
+Uma vez que conseguimos visualizar a brexa com o SQL Injection fica muito fácil descobrir a estrutura do banco acessado.
+
+É possivel gerar uma injeção justamente para descobrir essa estrutura e campos existente no banco de dados.
+
+.image SQL_Injection/exemploSQL4.png
+
+## SQL Injection na prática
+
+Procurando mais a respeito de SQL Injection, me deparei com esse site.
+
+Ricardo Mauro desenvolveu um site para que possamos testar o SQL Injection
+
+.link https://rmauro.dev/sql-injection-na-pratica/

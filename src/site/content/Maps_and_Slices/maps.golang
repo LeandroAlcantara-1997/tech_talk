@@ -1,0 +1,10 @@
+m := map[string]float64{
+	"valor": 123.50,
+	"peso":  456.35,
+	"frete": 21.34,
+}
+
+fmt.Printf("m: %v", m) // m: map[frete:21.34 peso:456.35 valor:123.5]
+
+m["teste"] = 10.3
+fmt.Printf("m: %v", m) // m: map[frete:21.34 peso:456.35 teste:10.3 valor:123.5]

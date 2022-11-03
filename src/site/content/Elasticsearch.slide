@@ -1,0 +1,196 @@
+# ElasticSearch e motores de busca/análise de dados
+
+João Paulo Ribeiro da Silva
+Appratico Tecnologia
+joao.paulo@appratico.com
+https://www.linkedin.com/in/joao-paulo-ribeiro-da-silva-7531221ba
+05 de novembro de 2021
+
+
+
+
+
+
+## O que é?
+
+Elasticsearch é uma poderosa ferramenta para realização de armazenamento, buscas e análise de dados construída para trabalhar com grande volume de dados, permitindo indexar documentos e realizar buscas nesses documentos em (quase) tempo real.Além de poder tratar e enviar esses dados para APis.
+
+Desenvolvido sob  **Apache Lucene**(biblioteca de software de mecanismo de pesquisa de código aberto), foi lançado pela primeira vez em 2010 pela **Elastic**.
+
+.image ElasticSearch/logo.jpg 300 600
+
+
+
+
+
+## Para que serve?
+
+Entre tantas funcionalidades temos:
+
+-Busca em aplicação;
+
+-Busca em website;
+
+-Busca empresarial;
+
+-Métricas de infraestrutura e monitoramento de container;
+
+-APM (Monitoramento de performance de aplicação);
+
+-Análise e visualização de dados geoespaciais;
+
+-Análise de segurança;
+
+-Análise de dados empresarial.
+
+
+
+
+
+## Como funciona?
+
+1-Os dados brutos fluem para o Elasticsearch através do **Beats** de uma variedade de fontes, incluindo logs, metrics de sistema e aplicações web. 
+
+2-Ingestão de dados é o processo pelo qual os dados brutos são analisados, normalizados e enriquecidos antes de serem indexados no Elasticsearch. 
+
+3-Depois que os dados são indexados no Elasticsearch, os usuários podem executar consultas complexas com base em seus dados e usar agregações para recuperar resumos complexos dos dados. 
+
+4-Do Kibana, os usuários podem criar visualizações avançadas dos dados, compartilharem dashboards e gerenciar o Elastic Stack.
+
+
+
+
+## 
+
+.image ElasticSearch/processo.png 400 1000
+
+
+
+
+## 
+
+**-Beats**
+
+Eles enviam dados de centenas ou milhares de computadores e sistemas para o Logstash ou o Elasticsearch.
+
+**-Logstash**:
+    
+Agrega e processa dados e envia para o ElasticSearch.O Logstash é um pipeline de processamento de dados open source que permite fazer a ingestão de dados de várias fontes simultaneamente enriquecendo e transformando esses dados antes de serem indexados no Elasticsearch.
+
+**-Kibana**:
+
+Ferramenta de visualização e gerenciamento de dados para o Elasticsearch que fornece **histogramas em tempo real**, **gráficos de linhas**, **gráficos de pizza** e **mapas**. O Kibana também inclui aplicações avançadas como o **Canvas**, que permite aos usuários criar infográficos dinâmicos personalizados com base em seus dados, e o **Elastic Maps** para visualizar dados geoespaciais.
+
+
+
+
+## Elastic Stack: 
+
+.image ElasticSearch/cap.svg 600 700
+
+
+
+
+## Kibana na prática:
+
+.image ElasticSearch/grafico.jpeg 550 1000
+
+
+
+
+## Por que usá-lo ?
+
+**1-Ele é rápido.**
+
+-desenvolvido em Lucene, ele fica insuperável em busca de dados, fora sua plataforma que praticamente é em tempo real. 
+
+**2-Distribuído de fábrica.**
+
+-distribuído em container(shards) oferece cópias de dados caso falha do hardware.
+
+**3-Fornecido com um amplo conjunto de recursos.**
+
+-além da velocidade, escalabilidade e resiliência ele oferece várias aplicações avançadas para otimizar sua eficiência.
+
+**4-Simplifica a ingestão, a visualização e os relatórios de dados.**
+
+-mediante ao Logstash e o Kibana.
+
+
+
+
+## Quais linguagens tem suporte na ferramenta?
+
+-**Go**;
+
+-Java;
+
+-JavaScript (Node.js);
+
+-NET(C#);
+
+-PHP;
+
+-Perl;
+
+-Python;
+
+-Ruby...
+
+
+
+
+## Ele fornece APIs REST?
+
+Sim, fornece um conjunto completo e avançado de APIs REST para executar tarefas como verificar a integridade de clusters, executar CRUD (Criar, ler, atualizar e excluir) e operações de busca com base em índices, além de executar operações de busca avançadas como filtragem e agregações.
+
+
+
+
+
+## Algumas empresas que utilizam:
+
+.image ElasticSearch/empresas.jpg
+
+.link https://www.elastic.co/pt/customers/?elektra=home&storm=logo-bar Outros
+
+
+
+
+## Curiosidades:
+
+-A ferramenta tem suporte em 34 idiomas (português).
+
+-Gratuito.
+
+-Qualquer pessoa pode ajudar a otimizar ou modificar seu código. 
+
+-Gerencie o Elasticsearch e o Kibana na AWS, no Google Cloud e no Microsoft Azure.
+
+-Eles dão treinamentos, cursos e documentos para melhor utilização da ferramenta.
+
+
+
+
+
+## Links:
+
+.link https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html APIs
+
+.link https://www.elastic.co/pt/ Elastic
+
+.link https://www.elastic.co/pt/demos Demos
+
+.link https://www.elastic.co/pt/elastic-stack/ Elastic Stack
+
+.link https://www.elastic.co/pt/elasticsearch/service Elasticsearch Service
+
+.link https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html Documentação do ElasticSearch
+
+.link https://github.com/elastic Repositório Elasticsearch GitHub
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+var (
+	cont   int64
+	parar  bool
+)
+for parar == false {
+	if cont == 5 {
+		parar = true
+	}
+	cont++
+	fmt.Printf(“Execução While %d \n”, cont)
+}

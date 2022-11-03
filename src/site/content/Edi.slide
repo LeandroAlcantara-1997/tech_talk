@@ -1,0 +1,67 @@
+# EDI
+
+André Miranda Pereira
+Appratico Tecnologia
+andre.miranda@appratico.com
+https://linkedin.com/in/andre-miranda-pereira/
+04 Janeiro 2020
+
+## O que é um EDI
+
+**EDI** sigla de _Eletronic Data Interchange_, em português siginifica troca eletrônica de dados. É uma tecnologia de troca de documentos de forma padronizada entre sistemas.
+
+Dentre os muitos layouts (padrões) existentes, na área de logística os formatos que mais se destacam seguem o padrão “EDI PROCEDA”.
+
+## PROCEDA
+
+Uma empresa chamada PROCEDA criou uma série de layouts de EDI relacionados à transportes.
+
+Como esse padrão foi amplamente adotado por diversos negócios, em todo o Brasil se passou a utilizar esses formatos, independentemente de qual empresa desenvolve os sistemas.
+
+Assim, criou-se o termo “EDI padrão PROCEDA”.
+
+## Layouts
+
+Dentre os padrões criados pela PROCEDA, os padrões que se destacam são:
+
+- NOTFIS
+
+- OCOREN
+
+- CONEMB
+
+- DOCCOB
+
+## NOTFIS
+
+O NOTFIS é enviado pelos embarcadores para as transportadoras.
+
+Este documento possui informações necessárias para que a transportadora realize o deslocamento da carga.    
+
+## OCOREN
+
+O OCOREN é enviado pelas transportadoras para os embarcadores.
+
+Este documento porta informações de _status_ do deslocamento da carga.
+
+## CONEMB
+
+O CONEMB é enviado pelas transportadoras para os embarcadores.
+
+Este documento possui dados de **CTE** (conhecimentos de transporte embarcados).
+
+CTE é um documento fiscal que serve para prestar contas sobre serviços relacionados à movimentação de cargas.
+
+## DOCCOB
+
+O DOCCOB é enviado pelas transportadoras para os embarcadores.
+
+Este documento possui dados de cobrança da carga movimentada pela transportadora.
+
+## Vantagens do EDI
+
+- Automatização na gestão e comunicação dos dados da carga
+
+- Diminuição de erros da informação transmitida
+
+- Redução de custos e escalabilidade

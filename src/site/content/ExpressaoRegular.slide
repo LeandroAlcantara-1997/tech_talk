@@ -1,0 +1,56 @@
+# Expressão Regular
+
+Renan Afonso Valentim
+Appratico Tecnologia
+renan.Afonso@appratico.com
+linkedin.com/in/renan-afonso-37616520a
+16 Julho 2021
+
+## Definição de Expressão Regular
+- Uma Expressão Regular, é uma representação para que encontre padrões dentro do texto.
+(Elas são utilizadas para criar regras com o objetivo de validar dados)
+    
+**Quando Utilizar:**
+- Usamos quando precisamos buscar ou validar algum padrão de texto.
+Regex é uma anotação que faz verificações em texto com 3 principais aplicações:
+
+- **1** Efetuar Buscas no texto
+
+- **2** Validações de dados.
+
+- **3** Fazer substituições de texto.
+
+**Sintaxe:**
+- Sintaxe de Expressões Regulares são case-sensitive, ou seja, "abc" é diferente de "ABC".
+
+## Regex para validar um campo que aceita CPF
+
+**Regex:** "^[0-9]{3}\.?\[0-9]{3}\.?\[0-9]{3}\-?\[0-9]{2}\$"
+
+**Explicação:**
+- [^] Inicio da string
+- [0-9]{3} Faixa de caracteres: 0 a 9, quantidade: 3 caracteres;
+- [0-9]{3} Faixa de caracteres: 0 a 9, quantidade: 3 caracteres;
+- [0-9]{3} Faixa de caracteres: 0 a 9, quantidade: 3 caracteres;
+- [0-9]{2} Faixa de caracteres: 0 a 9, quantidade: 2 caracteres;
+- [\.]? Um ponto, opcional. Foi usado \ no ponto, pois ele sozinho é caractere especial;
+- [-]? Um traço, opcional (se acrescentar outros caracteres, comece pelo – sempre);
+- [$] Final da string;
+- Caso queira aceitar outros separadores, basta acrescentar entre os [ ].
+Exemplo: [-\.\/]? vai aceitar tanto - quanto . e / naquela posição (? = ou nada)
+
+## GUIA RÁPIDO TABELA DE METACARACTERES
+-Embora a forma de construir as expressões regulares possam variar, dependendo da linguagem de programação utilizada, podemos citar alguns metacaracteres básicos de uma expressão: 
+
+.image ExpressaoRegular/metacaracteres.png
+
+## Exemplos de codigo em Dart/Flutter.
+
+
+.code ExpressaoRegular/isValidCPF.golang
+
+As pessoas podem ler seus programas com muito mais rapidez e precisão se puderem entendê-los em detalhes e, em seguida, agrupar esses detalhes em estruturas de nível superior.
+
+- Kent Beck
+
+

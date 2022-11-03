@@ -1,0 +1,65 @@
+# Git 
+
+Gabriel Antonio da Silva
+Appratico Tecnologia
+gabriel@appratico.com
+19 Junho 2020
+
+## O que é Git
+
+**Git** é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo. 
+
+Com ele podemos criar todo histórico de alterações no código do nosso projeto e facilmente voltar para qualquer ponto para saber como o código estava naquela data.
+
+Além disso, o Git nos ajuda muito a controlar o fluxo de novas funcionalidades entre vários desenvolvedores no mesmo projeto. 
+
+Ferramentas para análise auxiliam na resolução de conflitos quando o mesmo arquivo é editado por mais de uma pessoa em funcionalidades diferentes.
+
+## Exemplos de comandos utilizados em Git
+
+ - Define valores de configuração: **git config**
+ - Criar um novo repositório: **git init**
+ - Adicionar arquivos ao índice: **git add**
+ - Listar conflitos: **git diff**
+ - Remover arquivos do índice e do diretório: **git rm**
+ - Clonar um repositório: **git clone**
+ - Redefinir índice para o estado do último commit: **git reset**
+
+##
+
+ - Commitar e adicionar comentário a branch: **git commit -m "MEU_COMENTARIO"**
+ - Salvar modificações: **git push**
+ - Baixar modificações: **git pull**
+ - Listar branches: **git branch**
+ - Mover-se para outra branch: **git checkout minha-branch** (Adicione **-b** antes da branch para criar outra branch)
+ - Listando arquivos modificados: **git status**
+ - Logs de commits: **git log**
+
+## Alguns repositório Git
+
+.image Git/git.jpg
+
+## Ramificações do Git
+
+   Neste exemplo podemos visualizar as diversas branchs em paralelo com a master, e elas retornando para a master após o término do desenvolvimento.
+
+.image Git/branch.jpg
+
+
+## Vantagens Git
+
+- Rapidez: como os processos são operados localmente, deixa de ser preciso contactar o servidor central para proceder a operações como um commit, log ou diff.
+
+- Autonomia: permite trabalhar em modo desconectado, em qualquer local, só sendo necessária uma conexão com a rede para troca de revisões com outros repositórios.
+
+- Facilidade na Fusão: os DVCS (**Distributed Version Control Systems**) usam o rastreamento automático, o que facilita de forma significativa o processo de fusão.
+
+- Confiabilidade: Um sistema distribuído permite que a equipe continue a trabalhar e os repositórios dos programadores servem como cópias de backup, não havendo riscos de perder nada do projeto.
+
+## Vantagens GitHub
+
+- Criação de repositórios remotos: crie repositórios, armazene e atualize seus projetos de forma segura e em apenas um local no GitHub. Mantenha seus repositórios públicos ou privados, se preferir.
+
+- Ambiente colaborativo: outros usuários podem contribuir em seus projetos, sugerindo features, edições ou correção de bugs. Você pode fazer o mesmo em projetos nos quais tenha interesse em contribuir.
+
+- Portfólio: esta pode ser uma forma de complementar o seu LinkedIn.

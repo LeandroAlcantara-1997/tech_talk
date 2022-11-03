@@ -1,0 +1,9 @@
+var meuSlice []int64
+
+// ou
+
+meuSlice := []int64{}
+
+// ou
+
+meuSlice := make([]int64, 0)

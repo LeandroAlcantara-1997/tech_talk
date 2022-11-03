@@ -1,0 +1,3 @@
+for {
+	fmt.Println(“Execução ‘infinita’”)
+}

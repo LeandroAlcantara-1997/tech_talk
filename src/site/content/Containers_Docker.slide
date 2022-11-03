@@ -1,0 +1,60 @@
+# Containers e Docker
+
+Billy Pisso Brittis
+Appratico Tecnologia
+billy@appratico.com
+12 Junho 2020
+
+## O que é um Container Docker
+
+**Container** nada mais é do que um ambiente isolado contido em um servidor que, diferentemente das máquinas virtuais, divide um único host de controle.
+
+O isolamento dos containers permite um uso limitado de disco rígido, memória RAM e CPU.
+Utilizando um tipo de compartilhamento de kernel, eles conseguem poupar muito mais recursos que outros métodos de virtualização como uma **VM(Virtual Machine)**
+
+Já o **Docker** é uma plataforma open source na linguagem de programação Go, que possui alto desempenho e é desenvolvida diretamente no Google.
+
+Assim, o docker agrupa partes de softwares de um sistema de arquivo completo e que abrange todos os recursos necessários para sua execução. Por isso, é uma plataforma de containers.
+
+## Diferença entre Máquina Vitual e Container
+
+.image Container_Docker/container.jpg
+
+## Vantagens do Container
+
+- Não há, obrigatoriamente a necessidade de instalar um sistema operacional completo.
+
+- As plataformas de conteinerização aproveitam bibliotecas compartilhadas com o sistema operacional hospedeiro.
+
+- Os containers ocupam menos espaço em disco.
+
+- Consomem menos RAM e processamento.
+
+## Instalando o docker para Linux
+
+- **Atualize o pacote apt:** sudo apt-get update
+
+- **Instale os pacotes para permitir o apt usar o repositório sobre HTTPS:** sudo apt-get install \ apt-transport-https \ ca-certificates \ curl \ software-properties-common 
+
+- **Adicionar Docker Key:** curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+- **Adicionar a arquitetura**: sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+- **Instalar o Docker:** sudo apt-get install docker-ce
+
+## Testando o docker
+
+Com o Docker instalado, podemos criar containers com base em imagens prontas, usaremos uma imagem hello-world para testar nosso ambiente.
+
+Usando o comando: **docker container run hello-world** ele irá baixar a imagem e iniciar o container como na imagem abaixo.
+
+.image Container_Docker/hello-world.png
+
+## Imagens prontas para Containers
+
+Podemos criar diversos containers com base em imagens já prontas, e estão todas disponibilizadas em:  
+
+.link https://hub.docker.com/search?q=&type=image hub.docker

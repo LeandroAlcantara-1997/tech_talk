@@ -1,0 +1,3 @@
+for inicio; condicao; fim {
+	fmt.Println(“Execução trivial”)
+}

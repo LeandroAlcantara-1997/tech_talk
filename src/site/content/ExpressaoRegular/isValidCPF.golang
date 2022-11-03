@@ -1,0 +1,6 @@
+Dart/Flutter:
+
+bool isValidCPF(String cpf) {
+	String regNumero = "^\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}\$";
+	return RegExp(regNumero).hasMatch(cpf);
+}

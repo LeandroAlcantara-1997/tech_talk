@@ -1,0 +1,61 @@
+# Context
+
+André Miranda Pereira
+Appratico Tecnologia
+andre.miranda@appratico.com
+https://linkedin.com/in/andre-miranda-pereira/
+29 Maio 2020
+
+## Introdução
+
+**Context** permite que você passe um "contexto" para toda a requisição de um programa.
+
+Nele pode ser definido timeout, deadline e outros valores da requisição para utilizar além dos limites da API.
+
+Um contexto é criado quando chega uma requisição para o servidor e é propagado para os *métodos filhos*.
+
+## Criando Context
+
+O pacote context permite criar contextos das seguintes maneiras:
+
+- **Context TODO**:  Retorna um context vazio(**não nulo**) e é utilizado quando não está certo de qual tipo de contexto.
+
+
+- **Context Background**: Retorna um context vazio(**não nulo**) também. Este contexto nunca é cancelado, não possui valor e nao possui deadline(prazo). normalmente é utilizado por metodos principais(main/handler) e testes.
+
+
+- **Context WithValue**: Retorna uma cópia do contexto *pai* com um valor associado à key adicionada.
+    Os valores do context são somente para dados com escopo de solicitação que transitam processos e API's, não passe parâmetros opcionais para funções.
+    A key definida para o context não pode ser de um tipo primário como string ou int64 por exemplo, para que não ocorra colisões entre os pacotes utilizando context, a key deve possuir um tipo próprio definida pelo usuário.
+
+## Appengine Context
+
+O context do pacote appengine basicamente é um contexto que busca na requisição se aquele cliente já possui um context, se não tiver cria um context.Background()
+
+O context do appengine tem algumas mudanças como keys com autenticação no GCP. 
+
+.code Context/appengine.golang
+
+## Implementação
+
+.code Context/context.golang
+
+    Valor Encontrado para a key linguagem: Go
+    key não encontrada: usuario
+
+    Program exited.
+
+
+## Boas Práticas e Regras
+
+ - Não armazene context dentro de structs, invés disso, passe um context explícito para cada função que precise dele.
+
+ - O context é o primeiro parâmetro, normalmente nomeado como **c** ou **ctx**
+
+ - Não passe um context nulo, mesmo se a função permitir, passe um context.TODO() se não tiver certeza de qual utilizar.
+
+ - O mesmo context pode ser utilizados em diferentes goroutines.
+
+ - Contexts são seguros para uso simultâneo em várias goroutines.
+ 
+.image Context/gopherSmoking.jpg

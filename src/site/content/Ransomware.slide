@@ -1,0 +1,88 @@
+# Ransomware
+
+Gabriel de Sousa Borges
+Appratico Tecnologia
+gabriel.sousa@appratico.com
+linkedin.com/in/gabriel-sousa-borges/
+24 Setembro 2021
+
+## O que é Ransomware ?
+
+O termo ransomware foi atribuído aos softwares maliciosos que têm a capacidade de sequestrar dados. O próprio nome já indica isso, pois, em inglês, “ransom” que dizer resgate. 
+Esse tipo de software, embora tenha ganhado grandes proporções atualmente, não é uma invenção recente. Sabe-se que, desde os anos de 1980, softwares desse tipo já circulavam em computadores.
+
+Ransomware torna inacessíveis os dados armazenados em um equipamento, geralmente usando criptografia, e que exige pagamento de resgate(ransom) para restabelecer o acesso ao usuário.
+
+O pagamento do resgate geralmente é feito via bitcoins.
+
+.image Ransomware/ransomware2.png
+
+## Como o ransomware funciona
+
+**Etapa 1**
+
+O ransomware, como qualquer malware, pode obter acesso aos sistemas de uma organização de várias maneiras diferentes. No entanto, os operadores de ransomware tendem a preferir alguns metodos de infecção específicos.
+Um deles é o e-mail de phishing. Um e-mail malicioso pode conter um link para um site da Web que hospeda um download malicioso ou um anexo com funcionalidade de download incorporada.
+Se o destinatário do e-mail não identificar o phishing, o ransomware será baixado e executado em seu computador.
+
+Outro conhecido metodo de infecção por ransomware tira proveito de serviços como o Remote Desktop Protocol(RDP).
+Com o RDP, um invasor que tiver roubado ou adivinhado as credenciais de login de um funcionário pode usá-las para autenticar e acessar remotamente um computador dentro da rede corporativa.
+Com esse acesso, o invasor pode fazer download do malware diretamente e executá-lo na máquina sob seu controle.
+
+##
+
+**Etapa 2**
+
+Ao criptografar dados sigilosos e valiosos, o operador de ransomware pode exigir resgate em troca da chave de descriptografia, acreditando que a vítima fará o pagamento.
+
+O ransomware normalmente usa dois tipos de criptografia: simétrica e assimétrica.
+A criptografia simétrica requer a mesma chave para criptografia e descriptografia, enquanto a criptografia assimétrica usa uma chave pública para criptografia e uma chave privada para descriptografia.
+
+##
+
+**Etapa 3**
+
+Quando a criptografia dos arquivos estiver concluída, o ransomware estará preparado para exigir resgate.
+As diferentes variantes de ransomware fazem isso de várias maneiras, mas não é incomum ter um fundo de tela alterado para um texto de resgate ou arquivos de texto inseridos em cada diretório criptografado contendo o texto de resgate.
+Em geral, esses textos exigem uma determinada quantidade de criptomoeda em troca de acesso aos arquivos da vítima. Se o resgate for pago, o operador de ransomware fornecerá uma cópia da chave privada usada para proteger a chave de criptografia simétrica ou uma cópia da própria chave de criptografia simétrica.
+Essas informações podem ser inseridas em um programa de descriptografia (também fornecido pelo criminoso cibernético) que pode usá-las para reverter a criptografia e restaurar o acesso aos arquivos do usuário.
+
+## Proteção e prevenção contra ransomware
+
+- Treinamento e formação sobre conscientização cibernética: O ransomware geralmente é difundido usando e-mails de phishing. É fundamental treinar os usuários sobre como identificar e evitar possíveis ataques de ransomware
+- Backups contínuos de dados: Backups de dados automatizados e protegidos permitem que uma organização se recupere de um ataque com um mínimo de perda de dados e sem pagar um resgate.
+- Implantação de patches: É fundamental que as organizações garantam que todos os sistemas tenham os patches mais recentes implantados, pois isso reduz o número de vulnerabilidades em potencial dentro da empresa a serem exploradas por um invasor.
+- Autenticação do usuário: acessar serviços como RDP com credenciais de usuário roubadas é uma das técnicas preferidas de invasores que praticam ransomware.
+
+## Como um ataque Ransomware pode ser detectado
+
+Um ataque de ransomware é dividido em vários estágios. Em cada estágio, mudanças são feitas em sua rede.
+Essas mudanças devem ser descobertas e correlacionadas a tempo, para que a presença do ransomware possa ser detectada. 
+
+.image Ransomware/ransomware1.png
+
+## Curiosidade
+
+**O primeiro ataque cibernético em escala global**
+
+Em 2017, mais de 200mil computadores foram infectados pelo malware WannaCry. O ataque de proporções globais afetou pessoas, empresas e instituições no mundo todo.
+
+No Brasil, empresas como Vivo, Nextel e NET tiveram seus serviços paralisados. Os sistemas do Ministério Público e do Tribunal de Justiça de São Paulo também saíram do ar. 
+
+A Rússia foi o país com o maior número de PCs atacados. 
+
+Os cibercriminosos pediam US$300 iniciais para vitima para recuperar os arquivos. 
+Caso não fosse pago, eles ameaçavam apagar os arquivos permanentemente. Estima-se que as perdas causadas por esse episódio tenham somado US$ 4 bilhões em todo mundo.
+
+
+## Remoção de ransomware - O que fazer quando for infectado
+
+- Colocar a máquina em quarentena: algumas variantes de ransomware tentarão se espalhar para unidades conectadas e outras máquinas. Limite a disseminação do malware removendo o acesso a outros alvos em potencial.
+
+- Deixar o computador ligado: a criptografia de arquivos pode tornar um computador instável e desligá-lo pode resultar em perda de memória volátil. Mantenha o computador ligado para maximizar a probabilidade de recuperação.
+
+- Criar um backup: para algumas variantes de ransomware é possível descriptografar arquivos sem pagar o resgate. Faça uma cópia dos arquivos criptografados em mídia removível caso uma solução se torne disponível no futuro ou a falha do esforço de descriptografia comprometa os arquivos.
+
+- Verificar se há descriptografadores: verifique se há um descriptografador gratuito disponível junto à iniciativa No More Ransom Project. Se houver, execute-o em uma cópia dos dados criptografados para ver se ele é capaz de restaurar os arquivos.
+
+- Limpar e restaurar: restaure a máquina a partir de um backup limpo ou da instalação do sistema operacional. 

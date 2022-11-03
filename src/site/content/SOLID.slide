@@ -1,0 +1,83 @@
+# SOLID
+
+Douglas Alves de Araujo Junior
+Appratico Tecnologia
+Douglas@appratico.com
+16 outubro 2020
+
+## O que é SOLID? 
+
+**SOLID** são cinco princípios da programação orientada a objetos que facilitam no desenvolvimento de softwares, tornando-os fáceis de manter e estender.
+
+Esses princípios podem ser aplicados a qualquer linguagem de POO.
+
+SOLID  um acrônimo criado por Michael Feathers, após observar que cinco princípios da orientação a objetos e design de código 
+
+os 5 princípios sao:
+
+##  S -Princípio da Responsabilidade Única (Single Responsibility Principle)
+
+Exemplo a seguir: 
+
+
+.image SOLID/1solid.png  500 1000
+
+## como na imagem mostra cada funçao,classe, metodo e etc...
+
+Tem que ter  sua propria responsabilidade, assim você consegue reaproveitar o codigo mais facilmente,refatorar mais facilmente, fazer testes automatizados mais facilmente e gerar muito menos bugs
+
+e se acabar gerando fica mais facil de resolver tendo cada funçao, classe, metodo e etc... Fazendo apenas a unica coisa que ela foi destinada a fazer.
+
+## O — Open-Closed Principle (Princípio Aberto-Fechado)
+
+Objetos ou entidades devem estar abertos para extensão, mas fechados para modificação. 
+
+É sempre bom extender o codigo, nunca modificar o que já esta escrito 
+
+pois podemos gerar bugs ja que talvez tinhamos uma funçao ou methodo que era dependete de outra, sendo assim é melhor extender a funçao ou criar outra sem alterar o codigo fonte.
+
+
+##  
+.image SOLID/2solid.png
+
+## L - Princípio da Substituição de Liskov (Liskov Substitution Principle)
+
+Quando uma classe filha não pode executar as mesmas ações que sua classe pai, isso pode causar bugs.
+
+Se você tiver uma classe e criar outra classe a partir dela, ela se tornará um pai e a nova classe se tornará um filho. A classe filha deve ser capaz de fazer tudo que a classe pai pode fazer. Este processo é denominado Herança.
+
+A classe filha deve ser capaz de processar as mesmas solicitações e entregar o mesmo resultado que a classe pai ou pode entregar um resultado do mesmo tipo.
+
+A imagem mostra que a classe pai entrega café (pode ser qualquer tipo de café). É aceitável que a classe criança entregue Cappucino porque é um tipo específico de café,
+
+mas NÃO é aceitável entregar água.
+
+Se a classe filha não atender a esses requisitos, significa que a classe filha foi completamente alterada e viola este princípio.
+
+
+## 
+.image SOLID/3solid.png  700 800
+
+
+## I - Princípio da Segregação de Interfaces (Interface Segregation Principle)
+
+Classes nao devem ser forçados a depender de metodos que eles nao usam.
+
+O jeito certo é segregar as interfaces de maneiras corretas, entao quem quer girar os braço e mexer as antenas, faça , quem quer só girar os braços e nao mexer as antenas só gire os braços.
+
+## 
+.image SOLID/4solid.png 600 700
+
+
+## D - Princípio da Inversão de Dependência (Dependency Inversion Principle)
+
+Um modulo nao deve depender de detalhes de implementaçoes diretamente de outro modulo, deve existir uma abstraçao ali no meio por exemplo uma interface.
+
+Na forma errada a ferramenta é presa no braço do robo esta fundida sao inseparaveis,
+
+agora vemos que da forma certa temos um soquete(a interface) e ela aloca qualquer ferramente(metodo,classe,funçao e etc..) que for dado a ela,
+
+nao é implementada direta no robo.
+
+##  
+.image SOLID/5solid.png

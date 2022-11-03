@@ -1,0 +1,24 @@
+...
+
+var wg sync.WaitGroup
+
+func main() {						  	
+	wg.Add(1)						  .output
+	go frango()     					                           
+	picles()							Picles	
+	wg.Wait()                           Frango		
+}                                       Frango
+										Picles
+func frango() {                         Frango
+	for i := 0; i < 5; i++ {            Frango
+		fmt.Println("Frango")           Picles
+		time.Sleep(3) 				  Frango
+	}								   Picles
+	wg.Done()                           Manucu
+}                                        
+func picles() {                         
+	for i := 0; i < 5; i++ {
+		fmt.Println("Picles")
+		time.Sleep(5)
+	}
+}

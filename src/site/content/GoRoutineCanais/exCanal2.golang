@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	Noticia := make(chan string)
+
+	go sendNews(Noticia)
+	receiveNews(Noticia)
+}
+func sendNews(s chan<- string) { //envia valor pro canal
+	s <- "Ai é picles!"
+}
+func receiveNews(r <-chan string) { //recebe valor do canal
+	fmt.Println("A noticia recebida foi:", <-r)
+}
+
+.output
+
+A noticia recebida foi: Ai é picles!
